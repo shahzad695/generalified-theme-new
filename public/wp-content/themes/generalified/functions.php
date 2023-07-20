@@ -10,6 +10,7 @@ include(get_theme_file_path('/includes/widgets.php'));
 include(get_theme_file_path('/includes/theme-customizer.php'));
 include(get_theme_file_path('/includes/customizer/social.php'));
 include(get_theme_file_path('/includes/customizer/misc.php'));
+include(get_theme_file_path('/includes/customizer/enque.php'));
 
 
 //Hooks
@@ -17,5 +18,6 @@ add_action('wp_enqueue_scripts', 'generalified_scripts');
 add_action('after_setup_theme', 'generalized_register_navmenu');
 add_action('widgets_init', 'generalified_registar_sidebar');
 add_action('customize_register','generalified_customizer');
+add_action('customize_preview_init','generalified_customizer_script')
 //ShortCodes
 ?>

@@ -20,6 +20,7 @@ function generalified_social_media_customizer($wp_customize){
 
     $wp_customize->add_section('generalized_social_section',[
         'title'      =>     __('Social media settings','generalified'),
+        'panel'      =>     'generalified_custom_panel',
         'priority'   =>     30
     ]);
 

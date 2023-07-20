@@ -156,7 +156,7 @@
                         <!-- Top Cart
 ============================================= -->
                         <?php if(get_theme_mod('generalified_header_show_cart')){?>
-                            <div id="top-cart">
+                        <div id="top-cart">
                             <a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
                             <div class="top-cart-content">
                                 <div class="top-cart-title">
@@ -198,7 +198,7 @@
                         <!-- Top Search
 ============================================= -->
                        <?php if(get_theme_mod('generalified_header_show_search')){?>
-                                 <div id="top-search">
+                        <div id="top-search">
                             <a href="#" id="top-search-trigger">
                                 <i class="icon-search3"></i><i class="icon-line-cross"></i>
                             </a>

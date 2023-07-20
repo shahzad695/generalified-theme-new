@@ -1,10 +1,12 @@
 <?php
 function generalified_misc_customizer($wp_customize){
     $wp_customize->add_setting('generalified_header_show_search',[
-        'default'           =>          'yes'
+        'default'           =>          'yes',
+        'transport'         =>          'postMessage'
     ]);
     $wp_customize->add_setting('generalified_header_show_cart',[
-        'default'           =>          'yes'
+        'default'           =>          'yes',
+        'transport'         =>          'postMessage'
     ]);
     $wp_customize->add_setting('generalified_footer_show_copyright_text',[
         'default'           =>          'Copyrights &copy; 2017 All Rights Reserved by Udemy'
@@ -18,6 +20,7 @@ function generalified_misc_customizer($wp_customize){
 
     $wp_customize->add_section('generalified_misc_section',[
         'title'             =>          __('Generalified Misc Settings','generalified'),
+        'panel'             =>          'generalified_custom_panel',
         'priority'          =>          30
     ]);
     
@@ -27,7 +30,7 @@ function generalified_misc_customizer($wp_customize){
             'section'       =>      'generalified_misc_section',
             'settings'      =>      'generalified_header_show_search',
             'type'          =>      'checkbox',
-            'chocies'       =>      [
+            'choices'       =>      [
                 'yes'       =>      'Yes'
             ]
         ]
@@ -39,7 +42,7 @@ function generalified_misc_customizer($wp_customize){
             'section'       =>      'generalified_misc_section',
             'settings'      =>      'generalified_header_show_cart',
             'type'          =>      'checkbox',
-            'chocies'       =>      [
+            'choices'       =>      [
                 'yes'       =>      'Yes'
             ]
         ]
