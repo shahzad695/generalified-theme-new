@@ -20,6 +20,9 @@ wp_enqueue_style('generalified_font-icons');
 wp_enqueue_style('generalified_animate');
 wp_enqueue_style('generalified_magnific-popup');
 wp_enqueue_style('generalified_custom');
+
+$read_more_link = get_theme_mod( 'generalified_read_more_link' );
+wp_add_inline_style( 'generalified_custom', 'a.more-link{ color:' . $read_more_link . '; border-color: ' . $read_more_link.'; ' );
     
 
 wp_register_script('generalified_plugins',$uri.'/assests/js/plugins.js',[],false,true);

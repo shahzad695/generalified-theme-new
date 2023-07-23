@@ -47,36 +47,58 @@
           ============================================= -->
                     <div id="top-social">
                         <ul>
+                            <?php 
+                            if(get_theme_mod('generalized_facebook_handle')){?>
                             <li>
-                                <a href="#" class="si-facebook">
+                                <a href="https://facebook.com/<?php echo get_theme_mod('generalized_facebook_handle')?>" class="si-facebook">
                                     <span class="ts-icon"><i class="icon-facebook"></i></span><span
                                         class="ts-text">Facebook</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#" class="si-twitter">
-                                    <span class="ts-icon"><i class="icon-twitter"></i></span><span
-                                        class="ts-text">Twitter</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="si-instagram">
-                                    <span class="ts-icon"><i class="icon-instagram2"></i></span><span
-                                        class="ts-text">Instagram</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:+55.55.5555555" class="si-call">
-                                    <span class="ts-icon"><i class="icon-call"></i></span><span
-                                        class="ts-text">+55.55.5555555</span>
-                                </a>
-                            </li>
+                            <?php } ?>
+
+
+                            <?php 
+                            if(get_theme_mod('generlified_email_handle')){?>
                             <li>
                                 <a href="mailto:info@email.com" class="si-email3">
                                     <span class="ts-icon"><i class="icon-email3"></i></span><span
                                         class="ts-text">info@email.com</span>
                                 </a>
                             </li>
+                            <?php } ?>
+
+                            <?php 
+                            if(get_theme_mod('generlified_phone_handle')){?>
+                         
+                             <li>
+                                <a href="tel:+55.55.5555555" class="si-call">
+                                    <span class="ts-icon"><i class="icon-call"></i></span><span
+                                        class="ts-text">+55.55.5555555</span>
+                                </a>
+                            </li>
+                            <?php } ?>
+
+                            <?php 
+                            if(get_theme_mod('generlified_instagram_handle')){?>
+                            <li>
+                                <a href="https://instagram.com/<?php echo get_theme_mod('generlified_instagram_handle')?>" class="si-instagram">
+                                    <span class="ts-icon"><i class="icon-instagram2"></i></span><span
+                                        class="ts-text">Instagram</span>
+                                </a>
+                            </li>
+                            <?php } ?>
+
+                            <?php 
+                            if(get_theme_mod('generalified_twitter_handle')){?>
+                             <li>
+                                <a href="https://twitter.com/<?php echo get_theme_mod('generalified_twitter_handle')?>" class="si-twitter">
+                                    <span class="ts-icon"><i class="icon-twitter"></i></span><span
+                                        class="ts-text">Twitter</span>
+                                </a>
+                            </li>
+                            <?php } ?>
+                        
                         </ul>
                     </div><!-- #top-social end -->
 
@@ -133,6 +155,7 @@
 
                         <!-- Top Cart
 ============================================= -->
+                        <?php if(get_theme_mod('generalified_header_show_cart')){?>
                         <div id="top-cart">
                             <a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
                             <div class="top-cart-content">
@@ -169,18 +192,23 @@
                                 </div>
                             </div>
                         </div><!-- #top-cart end -->
+                       <?php }?>
+                        
 
                         <!-- Top Search
 ============================================= -->
+                       <?php if(get_theme_mod('generalified_header_show_search')){?>
                         <div id="top-search">
                             <a href="#" id="top-search-trigger">
                                 <i class="icon-search3"></i><i class="icon-line-cross"></i>
                             </a>
-                            <form action="#" method="get">
-                                <input type="text" name="q" class="form-control" placeholder="Type &amp; Hit Enter.."
+                            <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+                                <input type="text" name="s" class="form-control" placeholder="<?php _e( 'Type &amp; Hit Enter..', 'udemy' ); ?>"
                                     value="">
                             </form>
                         </div><!-- #top-search end -->
+                       <?php } ?>
+                       
 
                     </div>
 
