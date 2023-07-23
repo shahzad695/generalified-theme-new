@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<html dir="ltr" lang="<?php language_attributes()?>">
 
 <head>
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=<?php bloginfo( 'charset' )?>" />
 
     <!-- Stylesheets
 	============================================= -->
@@ -50,7 +50,8 @@
                             <?php 
                             if(get_theme_mod('generalized_facebook_handle')){?>
                             <li>
-                                <a href="https://facebook.com/<?php echo get_theme_mod('generalized_facebook_handle')?>" class="si-facebook">
+                                <a href="https://facebook.com/<?php echo get_theme_mod('generalized_facebook_handle')?>"
+                                    class="si-facebook">
                                     <span class="ts-icon"><i class="icon-facebook"></i></span><span
                                         class="ts-text">Facebook</span>
                                 </a>
@@ -70,8 +71,8 @@
 
                             <?php 
                             if(get_theme_mod('generlified_phone_handle')){?>
-                         
-                             <li>
+
+                            <li>
                                 <a href="tel:+55.55.5555555" class="si-call">
                                     <span class="ts-icon"><i class="icon-call"></i></span><span
                                         class="ts-text">+55.55.5555555</span>
@@ -82,7 +83,8 @@
                             <?php 
                             if(get_theme_mod('generlified_instagram_handle')){?>
                             <li>
-                                <a href="https://instagram.com/<?php echo get_theme_mod('generlified_instagram_handle')?>" class="si-instagram">
+                                <a href="https://instagram.com/<?php echo get_theme_mod('generlified_instagram_handle')?>"
+                                    class="si-instagram">
                                     <span class="ts-icon"><i class="icon-instagram2"></i></span><span
                                         class="ts-text">Instagram</span>
                                 </a>
@@ -91,14 +93,15 @@
 
                             <?php 
                             if(get_theme_mod('generalified_twitter_handle')){?>
-                             <li>
-                                <a href="https://twitter.com/<?php echo get_theme_mod('generalified_twitter_handle')?>" class="si-twitter">
+                            <li>
+                                <a href="https://twitter.com/<?php echo get_theme_mod('generalified_twitter_handle')?>"
+                                    class="si-twitter">
                                     <span class="ts-icon"><i class="icon-twitter"></i></span><span
                                         class="ts-text">Twitter</span>
                                 </a>
                             </li>
                             <?php } ?>
-                        
+
                         </ul>
                     </div><!-- #top-social end -->
 
@@ -192,23 +195,23 @@
                                 </div>
                             </div>
                         </div><!-- #top-cart end -->
-                       <?php }?>
-                        
+                        <?php }?>
+
 
                         <!-- Top Search
 ============================================= -->
-                       <?php if(get_theme_mod('generalified_header_show_search')){?>
+                        <?php if(get_theme_mod('generalified_header_show_search')){?>
                         <div id="top-search">
                             <a href="#" id="top-search-trigger">
                                 <i class="icon-search3"></i><i class="icon-line-cross"></i>
                             </a>
                             <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
-                                <input type="text" name="s" class="form-control" placeholder="<?php _e( 'Type &amp; Hit Enter..', 'udemy' ); ?>"
-                                    value="">
+                                <input type="text" name="s" class="form-control"
+                                    placeholder="<?php _e( 'Type &amp; Hit Enter..', 'udemy' ); ?>" value="">
                             </form>
                         </div><!-- #top-search end -->
-                       <?php } ?>
-                       
+                        <?php } ?>
+
 
                     </div>
 
