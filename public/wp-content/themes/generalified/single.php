@@ -26,9 +26,7 @@ $author_url = get_author_posts_url($author_ID)
                 <?php if(have_posts()){
                     while(have_posts()){
                     the_post();
-                    }
-            
-                    }?>
+                    ?>
                 <div class="single-post nobottommargin">
 
                     <!-- Single Post
@@ -113,7 +111,9 @@ $author_url = get_author_posts_url($author_ID)
 
                     <div class="line"></div>
                     <h4>Related Posts:</h4>
+                    <?php  }
 
+                    }?>
 
                     <?php 
                     

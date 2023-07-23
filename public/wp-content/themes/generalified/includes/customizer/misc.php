@@ -25,6 +25,13 @@ function generalified_misc_customizer($wp_customize){
         'default'           =>          0
     ]);
 
+    $wp_customize->add_setting('generalified_popular_posts_display',[
+        'default'           =>          false
+    ]);
+    $wp_customize->add_setting('generalified_popular_posts_widget_title',[
+        'default'           =>          'Breaking News'
+    ]);
+
     $wp_customize->add_section('generalified_misc_section',[
         'title'             =>          __('Generalified Misc Settings','generalified'),
         'panel'             =>          'generalified_custom_panel',
@@ -94,4 +101,25 @@ function generalified_misc_customizer($wp_customize){
         ]
     ) );
 
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,'generalified_popular_posts_display_input',[
+            'label'         =>      __('Popular Posts','generalified'),
+            'section'       =>      'generalified_misc_section',
+            'settings'      =>      'generalified_popular_posts_display',
+            'type'          =>      'checkbox',
+            'choices'       =>      [
+                'yes'       =>      'Yes'
+            ]
+            
+        ]
+    ) );
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,'generalified_popular_posts_widget_title_input',[
+            'label'         =>      __('Popular Posts Widget Title','generalified'),
+            'section'       =>      'generalified_misc_section',
+            'settings'      =>      'generalified_popular_posts_widget_title',
+            
+        ]
+    ) );
 }
